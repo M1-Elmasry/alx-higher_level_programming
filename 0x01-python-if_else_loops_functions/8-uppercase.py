@@ -5,5 +5,3 @@ def uppercase(str):
         print("{:c}".format(n - 32 if n >= 97 and n <= 122 else n), end="")
     else:
         print()
-
-uppercase("mostafa elmasry 98")
