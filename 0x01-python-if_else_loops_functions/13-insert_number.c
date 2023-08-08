@@ -17,17 +17,17 @@ listint_t *insert_node(listint_t **head, int number)
   node = malloc(sizeof(listint_t));
   node->n = number;
   node->next = NULL;
-  curr = *head;
 
-  /* if the node is the smallest or the list is empty */
-  if (curr->n >= node->n || !*head)
+  /* if the list is empty or the node is the smallest */
+  if (!*head || (*head)->n >= node->n)
   {
     temp = *head;
     *head = node;
     node->next = temp;
     return (node);
   }
-
+  
+  curr = *head;
 
   while (curr->next)
   {
