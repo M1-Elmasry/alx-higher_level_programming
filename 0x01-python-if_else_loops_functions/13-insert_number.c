@@ -11,7 +11,7 @@ listint_t *insert_node(listint_t **head, int number)
 {
   listint_t *curr, *node, *temp;
 
-  if (!head || !*head)
+  if (!head)
     return NULL;
 
   node = malloc(sizeof(listint_t));
@@ -19,8 +19,8 @@ listint_t *insert_node(listint_t **head, int number)
   node->next = NULL;
   curr = *head;
 
-  /* if the node is the smallest */
-  if (curr->n >= node->n)
+  /* if the node is the smallest or the list is empty */
+  if (curr->n >= node->n || !*head)
   {
     temp = *head;
     *head = node;
