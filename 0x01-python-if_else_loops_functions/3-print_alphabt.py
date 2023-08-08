@@ -2,4 +2,4 @@
 for c in range(97, 123):
     char = chr(c)
     if char not in "qe":
-        print(char, end="")
+        print("{}".format(char), end="")
