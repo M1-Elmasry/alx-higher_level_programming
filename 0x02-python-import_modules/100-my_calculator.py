@@ -6,8 +6,8 @@ from sys import argv, exit
 def basic_calc(expersion):
     ops = {"+": add, "-": sub, "*": mul, "/": div}
     if len(expersion) != 3:
-            print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-            exit(1)
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
 
     elif expersion[1] not in ops.keys():
         print("Unknown operator. Available operators: +, -, * and /")
