@@ -10,10 +10,12 @@ def roman_to_int(roman_string):
         "C": 100,
         "D": 500,
         "M": 1000,
+        "IV": 4,
+        "IX": 9,
         "XL": 40,
         "XC": 90,
-        "CM": 900,
-        "CD": 400
+        "CD": 400,
+        "CM": 900
     }
     values_keys = values.keys()
 
@@ -39,3 +41,23 @@ def roman_to_int(roman_string):
         result += values[roman_string[-1]]
 
     return result
+
+roman_number = "X"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCLXXXIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+
