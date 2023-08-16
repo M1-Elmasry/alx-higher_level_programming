@@ -29,6 +29,7 @@ int list_to_arr(listint_t **head, int *arr, int buffer_size)
 	return (len);
 }
 
+
 /**
  * is_palindrome - check if linked list is palindrome
  * @head: head of linked list
