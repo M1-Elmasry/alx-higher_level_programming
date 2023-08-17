@@ -2,42 +2,19 @@
 
 
 def roman_to_int(roman_string):
-    values = {
-        "I": 1,
-        "V": 5,
-        "X": 10,
-        "L": 50,
-        "C": 100,
-        "D": 500,
-        "M": 1000,
-        "IV": 4,
-        "IX": 9,
-        "XL": 40,
-        "XC": 90,
-        "CD": 400,
-        "CM": 900,
-    }
-    values_keys = values.keys()
+    values = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
     if roman_string is None:
         return None
 
-    if len(roman_string) == 1 and roman_string in values.keys():
-        return values[roman_string]
-
     result = 0
 
-    for i in range(1, len(roman_string)):
-        two_chars = roman_string[i - 1] + roman_string[i]
+    for i in range(len(roman_string) - 1):
+        if values[roman_string[i]] < values[roman_string[i + 1]]:
+            result -= values[roman_string[i]]
+        elif roman_string[i] in values.keys():
+            result += values[roman_string[i]]
 
-        if two_chars in values_keys:
-            result += values[two_chars]
-            i += 1
-
-        elif roman_string[i - 1] in values_keys:
-            result += values[roman_string[i - 1]]
-
-    if roman_string[-2] + roman_string[-1] not in values_keys:
-        result += values[roman_string[-1]]
+    result += values[roman_string[-1]]
 
     return result
