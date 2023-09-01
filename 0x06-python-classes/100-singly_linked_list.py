@@ -16,8 +16,15 @@ class Node:
             data (int): data of the new Node
             next_node (Node): pointer to the next Node
         """
-        self.__data = data
-        self.__next_node = next_node
+        if isinstance(data, int):
+            self.__data = data
+        else:
+            raise TypeError("data must be an integer")
+
+        if isinstance(next_node, Node) or next_node is None:
+            self.__next_node = next_node
+        else:
+            raise TypeError("next_node must be a Node object")
 
     @property
     def data(self):
@@ -46,7 +53,7 @@ class Node:
         """setter method for next_node attribute
 
         Raises:
-           TypeError: If next_node is not an instance 
+           TypeError: If next_node is not an instance
            of the Node class or not None.
         """
         if not isinstance(value, Node) and value is not None:
