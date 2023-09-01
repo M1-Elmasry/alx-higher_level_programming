@@ -46,7 +46,7 @@ class Node:
         """setter method for next_node attribute
 
         Raises:
-           TypeError: If next_node is not an instance
+           TypeError: If next_node is not an instance 
            of the Node class or not None.
         """
         if not isinstance(value, Node) and value is not None:
@@ -80,7 +80,7 @@ class SinglyLinkedList:
 
         # handle if the new node is the least
         if value < self.__head.data:
-            new_node.next_node = self.__head.next_node
+            new_node.next_node = self.__head
             self.__head = new_node
             return
 
