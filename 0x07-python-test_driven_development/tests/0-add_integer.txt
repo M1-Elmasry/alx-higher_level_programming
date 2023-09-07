@@ -13,14 +13,10 @@ Using ``add_integer``
   5
 
   >>> add_integer(1.5, 2)
-  Traceback (most recent call last):
-    ...
-  TypeError: a must be an integer
+  3
 
   >>> add_integer(10, 2.5)
-  Traceback (most recent call last):
-    ...
-  TypeError: b must be an integer
+  12
 
   >>> add_integer("m", 2)
   Traceback (most recent call last):
