@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""representing an empty class"""
+"""
+representing an empty class
+"""
 
 
 class BaseGeometry:
-    """BaseGeometry class"""
+    """
+    BaseGeometry class
+    """
 
     def area(self):
         """raise an Exception"""
