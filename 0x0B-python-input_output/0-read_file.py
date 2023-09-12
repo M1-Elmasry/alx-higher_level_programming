@@ -4,7 +4,7 @@
 
 def read_file(filename=""):
     """print @filename content"""
-    with open(filename, "r") as file:
+    with open(filename, "r", encoding="UTF8") as file:
         lines = file.readlines()
         for line in lines:
-            print(line)
+            print(line, end="")
