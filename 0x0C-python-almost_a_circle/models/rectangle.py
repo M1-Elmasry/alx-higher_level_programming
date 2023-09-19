@@ -159,8 +159,7 @@ class Rectangle(Base):
         print(
             "\n".join(
                 [" " * self.x + "#" * self.width for _ in range(self.height)]
-            ),
-            end="",
+            )
         )
 
     def update(self, *args, **kwargs):
