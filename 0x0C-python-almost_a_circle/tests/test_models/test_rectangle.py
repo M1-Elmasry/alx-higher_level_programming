@@ -124,7 +124,7 @@ class TestRectangle(unittest.TestCase):
         with redirect_stdout(file):
             r.display()
             output = file.getvalue()
-            self.assertEqual(output, "####\n####\n####\n####")
+            self.assertEqual(output, "####\n####\n####\n####\n")
 
     def test_Rectangle_display_x_y(self):
         r = Rectangle(4, 4, 1, 2)
@@ -132,7 +132,7 @@ class TestRectangle(unittest.TestCase):
         with redirect_stdout(file):
             r.display()
             output = file.getvalue()
-            self.assertEqual(output, "\n\n ####\n ####\n ####\n ####")
+            self.assertEqual(output, "\n\n ####\n ####\n ####\n ####\n")
 
     def test_Rectangle_str(self):
         r = Rectangle(10, 20)
