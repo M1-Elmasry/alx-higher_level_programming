@@ -107,7 +107,7 @@ class TestSquare(unittest.TestCase):
         with redirect_stdout(file):
             r.display()
             output = file.getvalue()
-            self.assertEqual(output, "####\n####\n####\n####")
+            self.assertEqual(output, "####\n####\n####\n####\n")
 
     def test_Square_display_x_y(self):
         r = Square(4, 1, 2)
@@ -115,7 +115,7 @@ class TestSquare(unittest.TestCase):
         with redirect_stdout(file):
             r.display()
             output = file.getvalue()
-            self.assertEqual(output, "\n\n ####\n ####\n ####\n ####")
+            self.assertEqual(output, "\n\n ####\n ####\n ####\n ####\n")
 
     def test_Square_str(self):
         r = Square(10)
