@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 script that lists all states in states table
 from the database hbtn_0e_0_usa in ascending order
