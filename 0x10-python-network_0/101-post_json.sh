@@ -1,3 +1,3 @@
 #!/bin/bash
-# display the body of the url response
-curl -sX DELETE ${1}
+# sent a json with post request to url
+curl -sX POST -H "Content-Type: application/json" --data "@$2" "$1"
